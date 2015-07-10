@@ -1,0 +1,102 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyActivity">
+
+    <!-- As the main content view, the view below consumes the entire
+         space available using match_parent in both dimensions. -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:isScrollContainer="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/Description_Title"
+                style="@style/Title"
+                android:text="Welcome to the KILLTEAM"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <TextView
+                android:id="@+id/Description"
+                style="@style/Text"
+                android:text="Kill Team is a fan-made expansion to Warhammer 40,000 that allows you to fight more intimate, more narrative driven games of Warhammer 40,000. Instead of fighting across vast battlefields controlling armies of hundreds of troops, you take control of a small task force with a handful of men"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/Playing_Killteam_Title"
+                style="@style/Title"
+                android:text="Playing a KILL TEAM"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/Playing_Killteam"
+                style="@style/Text"
+                android:text=">A Kill Team games follows all the normal Warhammer 40,000 rules found in the core rulebook, with the modifications and additions explained in this document"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/Team_Title"
+                style="@style/Title"
+                android:text="Building your team"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/Team"
+                style="@style/Text"
+                android:text="To use these rules you must create your team using the Kill Team Lists. Simply download the Team List for your army from the Kill Team website and write a 250 point team. You must follow all Model Allowance rules set out in your list. All models in the team lists have the Infantry unit type unless stated otherwise    "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/Armouries_Title"
+                style="@style/Title"
+                android:text="KILLTEAM armouries"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/Armouries"
+                style="@style/Text"
+                android:text="Some models have the option to purchase wargear from their team’s armoury, if they do it will say so in their options – note that some armoury items may only be taken by specific types of models. A model may only take one of each piece of wargear from the Armoury"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/Campaign_Title"
+                style="@style/Title"
+                android:text="Campaign rules"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/Campaign"
+                style="@style/Text"
+                android:text="If you are playing in a campaign, you will have the chance to expand and improve your Kill Team after each game. Your Kill Team will gain requisition in order to reinforce or reequip, and your models will increase in experience and gain skills. If you’re unlucky, they may even suffer injuries or death!"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- android:layout_gravity="start" tells DrawerLayout to treat
+         this as a sliding drawer on the left side for left-to-right
+         languages and on the right side for right-to-left languages.
+         If you're not building against API 17 or higher, use
+         android:layout_gravity="left" instead. -->
+    <!-- The drawer is given a fixed width in dp and extends the full height of
+         the container. -->
+    <fragment
+        android:id="@+id/navigation_drawer"
+        android:name="me.killteam_master.NavigationDrawerFragment"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

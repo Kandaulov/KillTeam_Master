@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KillTeam_Master</string>
+    <string name="index_page">Добро пожаловать!</string>
+    <string name="general_rules">Общие правила</string>
+    <string name="game_phases">Фазы игры</string>
+    <string name="game_missions">Миссии</string>
+    <string name="specific_rules">Правила</string>
+    <string name="create_roster">Собрать ростер</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
